@@ -60,7 +60,7 @@ base <- c(lon = 106.600562, lat = 21.285358)
 
 #Get map at zoom level 12 from google and stamen
 #TW_map <- get_map(location = Taiwan, zoom = 8, scale = 1)
-#use key for google map: register_google(key = "AIzaSyDuDHXaul9vHvcYu-9V8FhcUwkMKTzojVg")
+#use key for google map: 
 base_map <- get_map(location = base, maptype = "satellite", zoom = 4)
 TP_map <- get_map(location = Taipei, maptype = "satellite", zoom = 12)
 TP_map_wac <- get_map(location = Taipei, maptype = "watercolor", source = "stamen", zoom = 12)
