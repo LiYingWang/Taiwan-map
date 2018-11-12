@@ -10,7 +10,6 @@ View(HB)
 base <- c(lon = 106.600562, lat = 21.285358)
 
 #use key for google map: 
-#register_google(key = "AIzaSyDuDHXaul9vHvcYu-9V8FhcUwkMKTzojVg")
 
 #Get satellite map at zoom level 4 from google
 #base_map <- get_map(location = base, maptype = "satellite", zoom = 4)
