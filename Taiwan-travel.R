@@ -66,7 +66,14 @@ TP_map <- get_map(location = Taipei, maptype = "satellite", zoom = 12)
 TP_map_wac <- get_map(location = Taipei, maptype = "watercolor", source = "stamen", zoom = 12)
 TN_map_toner <- get_map(location = Tainan, maptype = "toner", source = "stamen", zoom = 13)
 
-#test
+# polygon exercise 
+
+Taipei <- tw_location %>% 
+  filter(city == "Taipei")
+ggplot(Taipei, aes(lon, lat)) +
+  geom_polygon(aes(fill = 'place-name'))
+
+# test
 ggmap(base_map)
 
 # Plot TP google map with path by using base layer call
@@ -119,8 +126,3 @@ ggmap(TP_map) +
 ggmap(TP_map_toner) +
   geom_point(data = tw_location,
              aes(lon, lat, color = type)) 
-
-# Plot TN map at zoom level 13 
-ggmap(TN_map_toner) +
-  geom_point(data = tw_location,
-             aes(lon, lat, color = type))
